@@ -1,0 +1,19 @@
+{
+  "name": "natalija-summerschool-2024",
+  "version": "1.0.0",
+  "description": "Summer School 2024 Cypress project",
+  "main": "comments.js",
+  "scripts": {
+    "format": "npx prettier . --write"
+  },
+  "keywords": [
+    "cypress",
+    "javascript"
+  ],
+  "author": "Natalija Valenika",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.13.1",
+    "prettier": "^3.3.3"
+  }
+}
