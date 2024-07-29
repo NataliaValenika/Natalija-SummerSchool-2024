@@ -8,3 +8,5 @@ let type = new Computer("AMD", 8, "Windows", 512, false);
 
 student.intriduce();
 type.description();
+
+

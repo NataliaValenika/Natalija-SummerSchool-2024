@@ -18,3 +18,6 @@ console.log(result);
 /*  Comments
 on any line
 */
+
+let count = 1
+console.log(count == 3)
