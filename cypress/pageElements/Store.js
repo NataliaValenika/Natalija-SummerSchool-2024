@@ -1,8 +1,3 @@
-class Store {
-   
-
-   
-    }
-
+class Store {}
 
 export default new Store();

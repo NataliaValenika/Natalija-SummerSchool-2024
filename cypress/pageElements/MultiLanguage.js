@@ -1,5 +1,3 @@
-class multiLanguage {
-
-}
+class multiLanguage {}
 
 export default new multiLanguage();

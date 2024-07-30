@@ -1,5 +1,3 @@
-class Cart {
-
-}
+class Cart {}
 
 export default new Cart();
