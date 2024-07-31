@@ -19,5 +19,5 @@ console.log(result);
 on any line
 */
 
-let count = 1
-console.log(count == 3)
+let count = 1;
+console.log(count == 3);

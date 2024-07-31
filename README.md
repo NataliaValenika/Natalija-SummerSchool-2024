@@ -5,7 +5,7 @@
 ## 1. npm scripts
 
 ### Code formating
+
 This project uses 'Prettier' package to format the code. Run the following command to format all files:
 
 `npm run format`
-
