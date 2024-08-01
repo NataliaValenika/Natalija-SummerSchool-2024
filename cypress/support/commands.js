@@ -48,7 +48,7 @@ Cypress.Commands.add("login", (username, password) => {
 
 Cypress.Commands.add("signout", () => {
   Global.elements.sideBarBurger().click();
-  Signout.elements.logOutButton().click(); 
+  Signout.elements.logOutButton().click();
   cy.url().should("include", "/us/sign-in");
 });
 

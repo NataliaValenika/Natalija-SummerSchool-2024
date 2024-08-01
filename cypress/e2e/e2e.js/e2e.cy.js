@@ -1,22 +1,17 @@
-import Global from "../../pageElements/Global"; // when you submit project check if no unused classes
-import Login from "../../pageElements/Login";
-import Home from "../../pageElements/Home";
-import Signout from "../../pageElements/Signout";
 import Store from "../../pageElements/Store";
 import Cart from "../../pageElements/Cart";
 import Checkout from "../../pageElements/Checkout";
 import Dashboard from "../../pageElements/Dashboard";
 
-
 // Log into system
 describe("End to end functionality", () => {
   beforeEach(() => {
-    cy.login(Cypress.env('username'), Cypress.env('password'));
+    cy.login(Cypress.env("username"), Cypress.env("password"));
   });
 
-// Check the store page functionality (sort by button, view button, )
+  // Check the store page functionality
   it("Store page", () => {
-    cy.visit("/store"); 
+    cy.visit("/store");
     cy.openStore();
     Store.elements.sortBy().click();
     Store.elements.viewButton().click();
@@ -31,6 +26,7 @@ describe("End to end functionality", () => {
     Store.elements.addToCart().click();
   });
 
+  //Check the cart functionality
   it("Cart", () => {
     cy.visit("/cart");
     cy.openCart();
@@ -38,10 +34,11 @@ describe("End to end functionality", () => {
     Cart.elements.discountInput().should("be.visible");
     Cart.elements.applyButton().click();
     Cart.elements.checkoutButton().click();
+    Cart.elements.cartContainer().should("be.visible");
     // cy.pause();
-    // check that checkout page is visible
   });
 
+  //Ensure that checkout is successful
   it("Checkout", () => {
     cy.visit("/checkout?step=address");
     //Global.navigateSideBar.openPage('Cart');
@@ -62,9 +59,10 @@ describe("End to end functionality", () => {
     cy.url().should("include", "order/confirmed");
   });
 
+  //Dashboard functionality
   it("Dashboard", () => {
     cy.visit("/dashboard");
-    cy.openDashboard(); // maybe call it openDashboard or similar?
+    cy.openDashboard();
     Dashboard.elements.profileButton().click();
     cy.url().should("include", "/profile");
     Dashboard.elements.pageWrapper().should("be.visible");
@@ -92,6 +90,7 @@ describe("End to end functionality", () => {
     Dashboard.elements.overwievPage().should("be.visible");
   });
 
+  //Signout functionality
   it("Signout", () => {
     cy.visit("/dashboard");
     cy.signout();

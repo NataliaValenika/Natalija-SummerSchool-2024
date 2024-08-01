@@ -1,13 +1,13 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  reporter: 'mochawesome',
+  reporter: "mochawesome",
   reporterOptions: {
     overwrite: false,
   },
   env: {
     username: "valenika2001@gmail.com",
-    password: " ",
+    password: "",
   },
   e2e: {
     viewportHeight: 1080,
