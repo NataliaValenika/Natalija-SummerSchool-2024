@@ -18,7 +18,7 @@ Before running the tests, ensure you have the following installed:
 
 For repository instalation you can use following commands:
 
-#### 1. Clone the repository:
+#### 1. Clone the repository: 
 
 `git clone <repository_url>`
 
