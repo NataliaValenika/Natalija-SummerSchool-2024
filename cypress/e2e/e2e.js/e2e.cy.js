@@ -19,7 +19,8 @@ describe("End to end functionality", () => {
     cy.contains("Products table view");
     Store.elements.productTable();
     Store.elements.viewStore().click();
-    cy.get('[href="/us/products/t-shirt"]').click();
+    cy.get('[href="/us/products/t-shirt"]').click();  // TODO: define element in page objects
+    // TODO: check some element is visible so you know that product was clicked successfully
     cy.visit("/products/t-shirt");
     Store.elements.productSize().click();
     Store.elements.productColor().click();
@@ -36,7 +37,7 @@ describe("End to end functionality", () => {
     Cart.elements.applyButton().click();
     Cart.elements.checkoutButton().click();
     Cart.elements.cartContainer().should("be.visible");
-    // cy.pause();
+    // cy.pause();        // TODO: remove comments that are forgotten
   });
 
   //Ensure that checkout is successful
