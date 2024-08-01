@@ -1,3 +1,4 @@
+/* Example from lesson
 import Global from "../../pageElements/Global";
 import Login from "../../pageElements/Login";
 import Home from "../../pageElements/Home";
@@ -28,3 +29,4 @@ describe("login functionality", () => {
     // Global.navigateSideBar.openPage('Store');
   });
 });
+*/

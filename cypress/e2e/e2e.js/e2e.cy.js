@@ -83,7 +83,7 @@ describe("End to end functionality", () => {
     Dashboard.elements.ordersButton().click();
     cy.url().should("include", "/orders");
     Dashboard.elements.orgerPage().should("be.visible");
-    Dashboard.elements.orgerDetailsButton().click({ multiple: true });
+    Dashboard.elements.orgerDetailsButton().first().click();
     Dashboard.elements.orgerDetails().should("be.visible");
     Dashboard.elements.overwievButton().click();
     Dashboard.elements.overwievPage().should("be.visible");
