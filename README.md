@@ -16,37 +16,39 @@ Before running the tests, ensure you have the following installed:
 
 ## Installation
 
-### Clone the repository:
+For repository instalation you can use following commands:
+
+#### 1. Clone the repository: 
 
 `git clone <repository_url>`
 
 `cd <repository_name>`
 
-### Install the dependencies:
+#### 2. Install the dependencies:
 
 `npm install`
 
 ## Running the Tests
 
-### Opening the Cypress Test Runner
+### 1. Opening the Cypress Test Runner
 
 To open the Cypress Test Runner and run tests interactively:
 
 `npx cypress open`
 
-### Running Tests in Headless Mode
+### 2. Running Tests in Headless Mode
 
 To run all the tests in headless mode and output the results to the terminal:
 
 `npx cypress run`
 
-### Running a Single Test
+### 3. Running a Single Test
 
 To run a single test file in headless mode, specify the path to the test file:
 
 `npx cypress run --spec cypress/integration/webstore.spec.js`
 
-### Running Tests in Different Browsers
+### 4. Running Tests in Different Browsers
 
 Cypress supports running tests in different browsers. By default, tests run in Electron. To run tests in a different browser, use the --browser flag:
 
@@ -56,25 +58,25 @@ Cypress supports running tests in different browsers. By default, tests run in E
 
 ## Important npm scripts
 
-### Code formating
+### 1. Code formating
 
 This project uses 'Prettier' package to format the code. Run the following command to format all files:
 
 `npm run format`
 
-### Cypress opening
+### 2. Cypress opening
 
 This project check the test in Cypress framework. To open Cypress framework use following command:
 
 `npm run cypress-open`
 
-### Running the tests
+### 3. Running the tests
 
 To check tests in Cypress framework use the following command:
 
 `npm run cypress-run`
 
-### Removing the report
+### 4. Removing the report
 
 HTML report is automatically generated after each run using 'mochawesome'. You can remove the reports using following command:
 
