@@ -15,13 +15,13 @@ class Checkout {
     submitDeliveryButton: () => cy.getByTestId("submit-delivery-option-button"),
     submitPymentButton: () => cy.getByTestId("submit-payment-button"),
     submitOrderButton: () => cy.getByTestId("submit-order-button"),
-    shippingFirstName: () => cy.getByTestId("shipping-first-name-input"), 
+    shippingFirstName: () => cy.getByTestId("shipping-first-name-input"),
     shippingLastName: () => cy.getByTestId("shipping-last-name-input"),
     shippingAdress: () => cy.getByTestId("shipping-address-input"),
     shippingPotalCode: () => cy.getByTestId("shipping-postal-code-input"),
     shipingCity: () => cy.getByTestId("shipping-city-input"),
-    shippingCountry: () => cy.getByTestId("shipping-country-select").select("United States"),
-
+    shippingCountry: () =>
+      cy.getByTestId("shipping-country-select").select("United States"),
   };
 
   fillFirstName(firstName) {
