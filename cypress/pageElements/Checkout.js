@@ -22,6 +22,8 @@ class Checkout {
     shipingCity: () => cy.getByTestId("shipping-city-input"),
     shippingCountry: () =>
       cy.getByTestId("shipping-country-select").select("United States"),
+    adressInfo: () =>
+      cy.get(":nth-child(1) > div.bg-white > .mb-6.flex-row > .font-sans"),
   };
 
   fillFirstName(firstName) {
