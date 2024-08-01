@@ -3,7 +3,7 @@ import Cart from "../../pageElements/Cart";
 import Checkout from "../../pageElements/Checkout";
 import Dashboard from "../../pageElements/Dashboard";
 
-// Log into system
+// Log into system with already existed
 describe("End to end functionality", () => {
   beforeEach(() => {
     cy.login(Cypress.env("username"), Cypress.env("password"));
@@ -41,9 +41,8 @@ describe("End to end functionality", () => {
   //Ensure that checkout is successful
   it("Checkout", () => {
     cy.visit("/checkout?step=address");
-    //Global.navigateSideBar.openPage('Cart');
-    //Cart.elements.checkoutButton().click();
-    //Checkout.elements.editAdressButton().click(); // click edit button
+    Checkout.elements.adressInfo().should("be.visible");
+    Checkout.elements.checkoutInfo().should("be.visible");
     Checkout.elements.shippingFirstName().clear().type("Natalija");
     Checkout.elements.shippingLastName().clear().type("Valenika");
     Checkout.elements.shippingAdress().clear().type("Brivibas");
@@ -51,15 +50,15 @@ describe("End to end functionality", () => {
     Checkout.elements.shipingCity().clear().type("LA");
     Checkout.elements.shippingCountry().select("United States");
     Checkout.elements.submit().click();
-    //Checkout.elements.editDelivery().click();
     Checkout.elements.deliveryButton1().click();
     Checkout.elements.submitDeliveryButton().click();
     Checkout.elements.submitPymentButton().click();
     Checkout.elements.submitOrderButton().click();
+    Checkout.elements.shippingInfo().should("be.visible");
     cy.url().should("include", "order/confirmed");
   });
 
-  //Dashboard functionality
+  //Check dashboard functionality
   it("Dashboard", () => {
     cy.visit("/dashboard");
     cy.openDashboard();

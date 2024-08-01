@@ -32,10 +32,12 @@ import Cart from "../pageElements/Cart";
 import Checkout from "../pageElements/Checkout";
 import Dashboard from "../pageElements/Dashboard";
 
+//Get the objects by id
 Cypress.Commands.add("getByTestId", (id) => {
   cy.get(`[data-testid=${id}]`);
 });
 
+//Loginto system an check if we are on the right page by link
 Cypress.Commands.add("login", (username, password) => {
   cy.session([username, password], () => {
     cy.visit("/");
@@ -46,12 +48,14 @@ Cypress.Commands.add("login", (username, password) => {
   });
 });
 
+//Signout from system and check if we are on the right page by link
 Cypress.Commands.add("signout", () => {
   Global.elements.sideBarBurger().click();
   Signout.elements.logOutButton().click();
   cy.url().should("include", "/us/sign-in");
 });
 
+//Open the Store through side bar and check the link of page
 Cypress.Commands.add("openStore", () => {
   Global.elements.sideBarBurger().click();
   Store.elements.storeButton().click();
@@ -59,6 +63,7 @@ Cypress.Commands.add("openStore", () => {
   cy.url().should("include", "/store");
 });
 
+//Open the Cart through side bar and check if we are on right page by link
 Cypress.Commands.add("openCart", () => {
   Global.elements.sideBarBurger().click();
   Cart.elements.cartButton().click();
@@ -67,12 +72,7 @@ Cypress.Commands.add("openCart", () => {
   Cart.elements.cartContainer().should("be.visible");
 });
 
-Cypress.Commands.add("checkout", (firstName) => {
-  Checkout.elements.checkoutInfo().should("be.visible");
-  Checkout.elements.shippingInfo().should("be.visible");
-  cy.url().should("include", "/checkout");
-});
-
+//Open the Dashboard through side bar and check that info is visible and we are on the right page
 Cypress.Commands.add("openDashboard", () => {
   Global.elements.sideBarBurger().click();
   Dashboard.elements.dashboardButton().click();
