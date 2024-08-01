@@ -68,7 +68,6 @@ Cypress.Commands.add("openCart", () => {
   Global.elements.sideBarBurger().click();
   Cart.elements.cartButton().click();
   Global.navigateSideBar.openPage("Cart");
-  cy.url().should("include", "/cart");
   Cart.elements.cartContainer().should("be.visible");
 });
 

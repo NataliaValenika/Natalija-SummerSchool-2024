@@ -30,6 +30,7 @@ describe("End to end functionality", () => {
   it("Cart", () => {
     cy.visit("/cart");
     cy.openCart();
+    cy.url().should("include", "/cart");
     Cart.elements.discount().click();
     Cart.elements.discountInput().should("be.visible");
     Cart.elements.applyButton().click();
