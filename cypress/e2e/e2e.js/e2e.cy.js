@@ -7,11 +7,14 @@ import Cart from "../../pageElements/Cart";
 import Checkout from "../../pageElements/Checkout";
 import Dashboard from "../../pageElements/Dashboard";
 
+
+// Log into system
 describe("End to end functionality", () => {
   beforeEach(() => {
     cy.login(Cypress.env('username'), Cypress.env('password'));
   });
 
+// Check the store page functionality (sort by button, view button, )
   it("Store page", () => {
     cy.visit("/store"); 
     cy.openStore();

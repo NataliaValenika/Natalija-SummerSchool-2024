@@ -7,7 +7,7 @@ module.exports = defineConfig({
   },
   env: {
     username: "valenika2001@gmail.com",
-    password: "bazuka1408",
+    password: "",
   },
   e2e: {
     viewportHeight: 1080,
