@@ -31,7 +31,9 @@ jobs:
             if: always()
             with:
                 name: report
-                path: ./mochawesome-report
+                path: 
+                     ./cypress/screenshots
+                     ./mochawesome-report
                 
                
                
