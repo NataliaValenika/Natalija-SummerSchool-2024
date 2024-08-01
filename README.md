@@ -6,7 +6,7 @@ Natalija-SummerSchool-2024
 
 This repository contains code for testing a webstore page using Cypress, a end-to-end testing framework. The tests cover various functionalities of the webstore to ensure it operates as expected.
 
-## 1. Important npm scripts
+## Important npm scripts
 
 ### Code formating
 
